@@ -30,15 +30,17 @@
             url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0'
           }
         ],
-        curr_url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0'
+        curr_url: ''
       }
     },
     methods: {
       playVideo (item) {
         this.curr_url = item.url;
+//        window.history.pushState({},null,'?_t='+Math.random())
       },
       videoClose(){
         this.curr_url = '';
+//        window.history.back();
       }
     }
   }
