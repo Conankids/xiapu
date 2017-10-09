@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from './../components/index.vue'
-import Register from './../components/register/register.vue'
+import Index from './../pages/index.vue'
 
 Vue.use(Router)
 
@@ -10,10 +9,6 @@ export default new Router({
     {
       path: '/',
       component: Index
-    },
-    {
-      path: '/register',
-      component: Register
     }
   ]
 })
