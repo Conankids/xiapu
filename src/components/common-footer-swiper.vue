@@ -17,6 +17,10 @@
 
 <script>
 
+  import Vue from 'vue'
+  import VueAwesomeSwiper from 'vue-awesome-swiper'
+  Vue.use(VueAwesomeSwiper)
+
   import CommonItem from '../components/common-item.vue'
   import SwiperImgItem from '../style/public/img-15@3x.jpg'
 

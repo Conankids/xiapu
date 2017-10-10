@@ -9,16 +9,21 @@
           class="swiper-slide"
         />
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    <div class="swiper-button swiper-button-prev"></div>
-    <div class="swiper-button swiper-button-next"></div>
+    <!--<div class="swiper-button swiper-button-prev"></div>-->
+    <!--<div class="swiper-button swiper-button-next"></div>-->
   </div>
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueAwesomeSwiper from 'vue-awesome-swiper'
+  Vue.use(VueAwesomeSwiper)
 
   import CommonItem from '../components/common-item.vue'
   import SwiperImgItem from '../style/public/img-15@3x.jpg'
+
 
   export default {
     props: {
@@ -38,9 +43,11 @@
         type: Object,
         default: function () {
           return {
-            prevButton: '.swiper-button-prev',
-            nextButton: '.swiper-button-next',
-            loop: false,
+//            prevButton: '.swiper-button-prev',
+//            nextButton: '.swiper-button-next',
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop: true,
           }
         }
       }

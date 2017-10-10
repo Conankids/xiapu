@@ -43,10 +43,21 @@
     },
     methods: {
       playVideo (item) {
-        this.curr_url = item.url
+        this.curr_url = item.url;
+        ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
+          window.addEventListener(item, this._preventDefault, {passive: false})
+        })
       },
       videoClose () {
-        this.curr_url = ''
+        this.curr_url = '';
+        ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
+          window.removeEventListener(item, this._preventDefault)
+        })
+      },
+      _preventDefault (e) {
+        e.preventDefault()
+        e.stopPropagation()
+        return false
       }
     }
   }
@@ -65,8 +76,8 @@
   }
 
   .video__item {
-    width: 186px * 2;
-    height: 102px * 2;
+    width: 372px;
+    height: 372px * 2 / 3;
     margin-top: 6px;
     position: relative;
 
