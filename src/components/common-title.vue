@@ -34,7 +34,7 @@
     padding: 0 56px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
   }
@@ -43,5 +43,8 @@
     height: 4px;
     background-color: #ED1B3A;
     margin-top: 40px;
+  }
+  .t2{
+    margin: 0 25px;
   }
 </style>

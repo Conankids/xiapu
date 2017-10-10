@@ -42,8 +42,7 @@
     justify-content: center;
     align-items: center;
     img{
-      min-height: 100%;
-      min-width: 100%;
+      width: 100%;
     }
     &.small{
       height: 140px * 2;
@@ -51,7 +50,7 @@
     }
   }
   .mask__bg{
-    background-color: rgba(242,242,242,0.45);
+    background-color: rgba(0,0,0,0.35);
     height: 70px;
     line-height: 70px;
     text-align: center;
@@ -61,5 +60,12 @@
     bottom: 0;
     left: 0;
     right: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
   }
 </style>

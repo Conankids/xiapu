@@ -95,6 +95,10 @@
       line-height: 40px;
       height: 80px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     .blog__query {
       margin-top: 20px;

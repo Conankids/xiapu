@@ -3,7 +3,10 @@
     <div class="video__item-box">
       <div class="video__item" v-for="item in video" @click="playVideo(item)">
         <iframe :src="item.url" class="iframe"></iframe>
-        <div class="video__item-over"></div>
+        <div class="video__item-over">
+          <img class="cover" :src="item.cover" />
+          <img class="video" :src="`${require('../style/public/icon-video.svg')}`" />
+        </div>
       </div>
     </div>
     <div class="video__item-mask" v-if="curr_url" @click="videoClose">
@@ -16,6 +19,7 @@
 </template>
 
 <script>
+
   export default {
     props: {
       video: {
@@ -23,13 +27,17 @@
         default: function () {
           return [
             {
-              url: 'http://player.youku.com/embed/XMjg2ODAxMzYyOA=='
+              url: 'http://player.youku.com/embed/XMjg2ODAxMzYyOA==',
+              cover: require('../style/public/img-30@3x.jpg')
             }, {
-              url: 'http://player.youku.com/embed/XMjg5OTg1MDkyOA=='
+              url: 'http://player.youku.com/embed/XMjg5OTg1MDkyOA==',
+              cover: require('../style/public/img-31@3x.jpg')
             }, {
-              url: 'http://player.youku.com/embed/XMjg2ODAwODU1Ng=='
+              url: 'http://player.youku.com/embed/XMjg2ODAwODU1Ng==',
+              cover: require('../style/public/img-32@3x.jpg')
             }, {
-              url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0'
+              url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0',
+              cover: require('../style/public/img-33@3x.jpg')
             }
           ]
         }
@@ -88,6 +96,26 @@
       width: 100%;
       height: 100%;
       z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .cover{
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .video{
+        width: 60px;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
     }
   }
 

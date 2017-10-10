@@ -256,7 +256,8 @@
   }
 
   .swiper-slide img {
-    width: 100%;
+    min-width: 100% !important;
+    min-height: 100% !important;
   }
   .mask__cover{
 
