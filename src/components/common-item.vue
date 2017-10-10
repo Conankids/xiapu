@@ -42,7 +42,8 @@
     justify-content: center;
     align-items: center;
     img{
-      height: 100%
+      min-height: 100%;
+      min-width: 100%;
     }
     &.small{
       height: 140px * 2;
