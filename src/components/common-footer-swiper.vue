@@ -24,7 +24,7 @@
         swiperOption: {
           prevButton: '.swiper-button-prev',
           nextButton: '.swiper-button-next',
-          loop: true,
+          loop: false,
         },
         bannerData: [{
           title: '线下体验趴 - AQUOS夏普旷视系列电视',
@@ -63,6 +63,9 @@
     transform: translateY(-50%);
     width: 16px * 2 !important;
     height: 32px * 2 !important;
+    &.disabled{
+      opacity: 0.5;
+    }
     &.swiper-button-prev {
 
     }

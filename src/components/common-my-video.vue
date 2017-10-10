@@ -6,8 +6,8 @@
         <div class="video__item-over"></div>
       </div>
     </div>
-    <div class="video__item-mask" v-show="curr_url">
-      <iframe :src="curr_url" class="iframe"></iframe>
+    <div class="video__item-mask" v-if="curr_url" @click="videoClose">
+      <iframe :src="curr_url" class="iframe" :style="`height:${height}px`"></iframe>
       <div class="video__item-close" @click="videoClose">
         <img src="../style/images/icon-close@3x.png" />
       </div>
@@ -30,17 +30,16 @@
             url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0'
           }
         ],
-        curr_url: ''
+        curr_url: '',
+        height:window.innerWidth * 2 / 3
       }
     },
     methods: {
       playVideo (item) {
         this.curr_url = item.url;
-//        window.history.pushState({},null,'?_t='+Math.random())
       },
       videoClose(){
         this.curr_url = '';
-//        window.history.back();
       }
     }
   }
