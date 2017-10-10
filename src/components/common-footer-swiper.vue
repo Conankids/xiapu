@@ -17,6 +17,7 @@
 <script>
 
   import CommonItem from '../components/common-item.vue'
+  import SwiperImgItem from '../style/public/img-15@3x.jpg';
 
   export default {
     data () {
@@ -28,12 +29,12 @@
         },
         bannerData: [{
           title: '线下体验趴 - AQUOS夏普旷视系列电视',
-          url: 'vv',
-          cover: '/static/img/img-14@3x.9afe28c.jpg'
+          url: 'http://m.jiguo.com/',
+          cover: SwiperImgItem
         }, {
           title: '线下体验趴 - AQUOS夏普旷视系列电视',
-          url: 'dfb',
-          cover: '/static/img/img-14@3x.9afe28c.jpg'
+          url: 'http://m.jiguo.com/',
+          cover: SwiperImgItem
         }]
       }
     },
@@ -75,9 +76,9 @@
     }
   }
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-    background-image: url(../style/public/icon-swiper-left.svg);
+    background-image: url(../style/public/icon-swiper-left.svg) !important;
   }
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
-    background-image: url(../style/public/icon-swiper-right.svg);
+    background-image: url(../style/public/icon-swiper-right.svg) !important;
   }
 </style>
