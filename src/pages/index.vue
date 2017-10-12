@@ -20,30 +20,36 @@
       />
     </div>
 
-    <div class="index__four-pox">
+    <div class="mgt4">
       <common-item
         title="夏普洗衣棒"
         url="https://sharp.tmall.com/search.htm?spm=a220m.1000858.1000725.7.3865a893siZLQz&user_number_id=2993567440&rn=910785fe7166b5d375015a9065ecb645&keyword=%CF%C4%C6%D5%CF%B4%D2%C2%B0%F4"
         :cover="`${require('../style/public/img-4@3x.jpg')}`"
-        type="small"
+        type="larg"
       />
+    </div>
+    <div class="mgt4">
       <common-item
         title="夏普冰箱"
         url="https://mall.jd.com/index-1000014146.html"
         :cover="`${require('../style/public/img-5@3x.jpg')}`"
-        type="small"
+        type="larg"
       />
+    </div>
+    <div class="mgt4">
       <common-item
         title="夏普无水锅"
         url="javascript:;"
         :cover="`${require('../style/public/img-6@3x.jpg')}`"
-        type="small"
+        type="larg"
       />
+    </div>
+    <div class="mgt4">
       <common-item
         title="夏普洗衣机"
         url="https://mall.jd.com/view_search-606768-4353456-1-0-20-1.html"
         :cover="`${require('../style/public/img-7@3x.jpg')}`"
-        type="small"
+        type="larg"
       />
     </div>
     <div class="mgt4">
@@ -53,12 +59,11 @@
       />
     </div>
 
-    <common-title title="夏普双十一爆款产品免费体验"/>
-
     <div class="mgt4">
+      <common-title title="夏普双十一爆款产品免费体验"/>
       <common-img
         url="javascript:;"
-        :cover="`${require('../style/public/img-9@3x.jpg')}`"
+        :cover="`${require('../style/public/img-40@3x.jpg')}`"
       />
     </div>
 

@@ -71,7 +71,7 @@
     padding: 0 10px * 2;
 
     .header__logo {
-      height: 18px * 2;
+      height: 46px;
       img {
         height: 100%;
         display: block;

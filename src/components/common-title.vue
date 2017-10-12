@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 400;
   }
   .common__title{
     color: #ED1B3A;
