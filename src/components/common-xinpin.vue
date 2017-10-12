@@ -1,6 +1,6 @@
 <template>
   <div class="index__four-pox-type-2" v-if="blog.length">
-    <div class="index__four-item" v-for="item in blog">
+    <div class="index__four-item k-animate-2" v-for="item in blog">
       <a :href="item.url">
         <div class="index__four-item-img">
           <img :src="item.cover"/>
@@ -35,6 +35,9 @@
           })
         });
         _this.blog = blog;
+        _this.$nextTick(()=>{
+          window.hasAnimate = $('.k-animate:not(.into-k-animate),.k-animate-2:not(.into-k-animate)');
+        })
       }, 'jsonp')
     }
   }

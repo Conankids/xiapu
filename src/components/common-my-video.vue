@@ -1,7 +1,7 @@
 <template>
   <div class="mask__box">
     <div class="video__item-box">
-      <div class="video__item" v-for="item in video" @click="playVideo(item)">
+      <div class="video__item k-animate-2" v-for="item in video" @click="playVideo(item)">
         <iframe :src="item.url" class="iframe"></iframe>
         <div class="video__item-over">
           <img class="cover" :src="item.cover" />

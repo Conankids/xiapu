@@ -1,6 +1,6 @@
 <template>
   <div class="blog__box" v-if="blog.length">
-    <div class="blog__item" v-for="item in blog">
+    <div class="blog__item k-animate-2" v-for="item in blog">
       <a :href="item.url">
         <div class="blog__cover">
           <img :src="item.cover"/>
@@ -59,6 +59,9 @@
           })
         });
         _this.blog = blog;
+        _this.$nextTick(()=>{
+          window.hasAnimate = $('.k-animate:not(.into-k-animate),.k-animate-2:not(.into-k-animate)');
+        })
       }, 'jsonp')
     }
   }

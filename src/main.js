@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 import Loading from './components/loading'
 import 'swiper/dist/css/swiper.css'
 
@@ -13,6 +14,7 @@ Vue.use(Loading)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
