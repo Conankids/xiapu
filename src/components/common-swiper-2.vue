@@ -9,10 +9,10 @@
           class="swiper-slide"
         />
       </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
+      <!--<div class="swiper-pagination" slot="pagination"></div>-->
     </swiper>
-    <!--<div class="swiper-button swiper-button-prev"></div>-->
-    <!--<div class="swiper-button swiper-button-next"></div>-->
+    <div class="swiper-button swiper-button-prev"></div>
+    <div class="swiper-button swiper-button-next"></div>
   </div>
 </template>
 
@@ -32,10 +32,12 @@
         default: function () {
           return [{
             'url': 'http://www.jiguo.com/event/index/1381.html',
-            'cover': 'http://s1.jiguo.com/beecb74c-05c5-45e0-94c3-79b257c43ea7/640?imageView2/1/w/640/h/400/q/100'
+            'cover': 'http://s1.jiguo.com/beecb74c-05c5-45e0-94c3-79b257c43ea7/640?imageView2/1/w/640/h/400/q/100',
+            'title':'夏普旷视系列电视'
           }, {
             'url': 'http://www.jiguo.com/event/index/985.html',
-            'cover': 'http://s1.jiguo.com/26ad56a4-a75d-4ba3-8253-d9f1ed38dcc6/640?imageView2/1/w/640/h/400/q/100'
+            'cover': 'http://s1.jiguo.com/26ad56a4-a75d-4ba3-8253-d9f1ed38dcc6/640?imageView2/1/w/640/h/400/q/100',
+            'title':'夏普50/60吋互联网电视'
           }]
         }
       },
@@ -43,11 +45,11 @@
         type: Object,
         default: function () {
           return {
-//            prevButton: '.swiper-button-prev',
-//            nextButton: '.swiper-button-next',
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            loop: true,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+//            pagination: '.swiper-pagination',
+//            paginationClickable: true,
+            loop: false,
           }
         }
       }

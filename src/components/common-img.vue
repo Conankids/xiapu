@@ -20,11 +20,11 @@
 
 <style lang="less" rel="stylesheet/less" scoped>
   .index__nwe1{
-    height: 200px;
+    /*height: 200px;*/
     width: 100%;
     img{
       width: 100%;
-      height: 100%;
+      /*height: 100%;*/
     }
   }
 </style>

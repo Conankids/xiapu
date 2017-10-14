@@ -15,13 +15,13 @@
         </div>
         <div class="header-menu-item-box">
           <ul>
-            <li class="on"><a href="javascript:;">首页</a></li>
-            <li><a href="javascript:;">升级计划</a></li>
-            <li><a href="javascript:;">申请体验</a></li>
-            <li><a href="javascript:;">热门新品</a></li>
-            <li><a href="javascript:;">体验报告</a></li>
-            <li><a href="javascript:;">体验视频</a></li>
-            <li><a href="javascript:;">活动回顾</a></li>
+            <li @click="scrollPagePosition($event,'index')" class="on"><a href="javascript:;">首页</a></li>
+            <li @click="scrollPagePosition($event,'sjjh')"><a href="javascript:;">升级计划</a></li>
+            <li @click="scrollPagePosition($event,'sqty')"><a href="javascript:;">申请体验</a></li>
+            <li @click="scrollPagePosition($event,'rmxp')"><a href="javascript:;">热门新品</a></li>
+            <li @click="scrollPagePosition($event,'tybg')"><a href="javascript:;">体验报告</a></li>
+            <li @click="scrollPagePosition($event,'tysp')"><a href="javascript:;">体验视频</a></li>
+            <li @click="scrollPagePosition($event,'hdhg')"><a href="javascript:;">活动回顾</a></li>
           </ul>
         </div>
       </div>
@@ -31,6 +31,7 @@
 
 <script>
 
+  import $ from 'jquery'
 
   export default {
     data () {
@@ -56,6 +57,17 @@
         e.preventDefault()
         e.stopPropagation()
         return false
+      },
+      scrollPagePosition (e,scrollEl) {
+        $(e.currentTarget).parent().find('.on').removeClass('on');
+        $(e.currentTarget).addClass('on');
+        this.scrollEl = $('#'+scrollEl);
+        if( this.scrollEl.length ){
+          this.htmlBody = this.htmlBody || $('html,body');
+          this.htmlBody.animate({
+            scrollTop:this.scrollEl.offset().top
+          });
+        }
       }
     }
   }
@@ -110,23 +122,24 @@
       }
     }
   }
-  .header-menu-item-box{
+
+  .header-menu-item-box {
     color: #fff;
     line-height: 66px;
     font-size: 48px;
     text-align: center;
-    li{
+    li {
       height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       user-select: none;
     }
-    a{
+    a {
       color: #fff;
     }
     li.on {
-      a{
+      a {
         color: #E7030F;
       }
     }

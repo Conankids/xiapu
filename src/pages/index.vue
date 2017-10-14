@@ -1,11 +1,11 @@
 <template>
-  <div style="background-color: #fff;">
+  <div style="background-color: #fff;" id="index">
     <header-nav class="element-bg"></header-nav>
     <div class="banner__box k-animate element-bg">
       <a href="javascript:;"><img :src="headerBanner"/></a>
     </div>
-    <div class="k-animate-2 element-bg" style="overflow: hidden">
-      <div class="k-animate-2">
+    <div class="k-animate-2 element-bg" ref="element-body" style="overflow: hidden">
+      <div class="k-animate-2" id="sjjh">
         <common-title title="夏普双十一理想生活升级计划"/>
         <common-item
           title="夏普电视"
@@ -20,15 +20,6 @@
           :cover="`${require('../style/public/img-3@3x.jpg')}`"
         />
       </div>
-
-      <!--<div class="mgt4">-->
-        <!--<common-item-->
-          <!--title="夏普洗衣棒"-->
-          <!--url="https://sharp.tmall.com/search.htm?spm=a220m.1000858.1000725.7.3865a893siZLQz&user_number_id=2993567440&rn=910785fe7166b5d375015a9065ecb645&keyword=%CF%C4%C6%D5%CF%B4%D2%C2%B0%F4"-->
-          <!--:cover="`${require('../style/public/img-4@3x.jpg')}`"-->
-          <!--type="larg"-->
-        <!--/>-->
-      <!--</div>-->
       <div class="mgt4 k-animate-2">
         <common-item
           title="夏普冰箱"
@@ -37,14 +28,6 @@
           type="larg"
         />
       </div>
-      <!--<div class="mgt4">-->
-        <!--<common-item-->
-          <!--title="夏普无水锅"-->
-          <!--url="javascript:;"-->
-          <!--:cover="`${require('../style/public/img-6@3x.jpg')}`"-->
-          <!--type="larg"-->
-        <!--/>-->
-      <!--</div>-->
       <div class="mgt4 k-animate-2">
         <common-item
           title="夏普洗衣机"
@@ -56,11 +39,11 @@
       <div class="mgt4 k-animate-2">
         <common-img
           url="javascript:;"
-          :cover="`${require('../style/public/img-8@3x.jpg')}`"
+          :cover="`${require('../style/public/img-50@3x.jpg')}`"
         />
       </div>
 
-      <div class="mgt4 k-animate-2">
+      <div class="mgt4 k-animate-2" id="sqty">
         <common-title title="夏普双十一爆款产品免费体验"/>
         <common-img
           url="javascript:;"
@@ -68,26 +51,26 @@
         />
       </div>
 
-      <div class="index__new-product k-animate-2">
+      <div class="index__new-product k-animate-2" id="rmxp">
         <common-title title="夏普热门新品"/>
         <common-xinpin/>
       </div>
 
-      <div class="index__blog-tyd k-animate-2">
+      <div class="index__blog-tyd k-animate-2" id="tybg">
         <common-title title="极果首席体验师热门体验报告"/>
         <div class="index__four-pox">
           <common-blog/>
         </div>
       </div>
 
-      <div class="index__blog-tyd k-animate-2">
-        <common-title title="夏普电视体验视频"/>
+      <div class="index__blog-tyd" id="tysp">
+        <common-title title="夏普电视体验视频" class="k-animate-2"/>
         <div class="index__four-pox">
           <common-my-video/>
         </div>
       </div>
 
-      <div class="index__event-hg k-animate-2">
+      <div class="index__event-hg k-animate-2" id="hdhg">
         <common-title title="夏普电视往期爆品试用活动回顾"/>
         <div class="index__footer-swiper">
           <common-swiper-2/>
@@ -108,6 +91,7 @@
 
 <script>
 
+  import $ from 'jquery'
   import { mapActions } from 'vuex'
   import HeaderNav from '../components/header-nav.vue'
   import CommonTitle from '../components/common-title.vue'
@@ -131,6 +115,9 @@
       var img = new Image()
       img.onload = () => {
         this.hidePageLoading()
+        setTimeout(()=>{
+          $(this.$refs['element-body']).removeClass('k-animate-2 into-k-animate')
+        },1000);
       }
       img.src = headerBanner
     },
@@ -155,9 +142,10 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  .element-bg{
+  .element-bg {
     background-color: #F0EAE8;
   }
+
   .banner__box {
     height: 272px * 2;
     img {

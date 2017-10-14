@@ -30,7 +30,7 @@
           }
           return true
         })
-      },100,150)
+      },30,50)
       $(window).off('scroll.into.animate').on('scroll.into.animate', function () {
         debounce()
       }).trigger('scroll.into.animate')
