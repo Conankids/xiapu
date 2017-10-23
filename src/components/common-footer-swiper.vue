@@ -1,7 +1,7 @@
 <template>
   <div class="swiper__box">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="item in bannerData">
+      <swiper-slide v-for="item in bannerData" :key="item.url">
         <common-item
           :title="item.title"
           :url="item.url"

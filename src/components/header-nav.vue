@@ -9,7 +9,7 @@
       </div>
     </div>
     <transition name="fade">
-      <div class="header__show-menu" v-if="show_menu">
+      <div class="header__show-menu" v-show="show_menu">
         <div class="header__menu-close" @click="closeMenu">
           <img src="../style/images/icon-close@3x.png"/>
         </div>
@@ -39,40 +39,60 @@
         show_menu: false
       }
     },
-    components: {},
+    watch: {
+      show_menu () {
+        if(this.show_menu){
+          ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
+            window.addEventListener(item, this._preventDefault, {passive: false})
+          })
+        }else{
+          ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
+            window.removeEventListener(item, this._preventDefault)
+          })
+        }
+      }
+    },
     methods: {
       closeMenu () {
-        this.show_menu = false;
-        ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
-          window.removeEventListener(item, this._preventDefault)
-        })
+        this.show_menu = false
       },
       openMenu () {
         this.show_menu = true;
-        ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
-          window.addEventListener(item, this._preventDefault, {passive: false})
-        })
       },
       _preventDefault (e) {
         e.preventDefault()
         e.stopPropagation()
         return false
       },
-      scrollPagePosition (e,scrollEl) {
-        $(e.currentTarget).parent().find('.on').removeClass('on');
-        $(e.currentTarget).addClass('on');
-        this.scrollEl = $('#'+scrollEl);
-        if( this.scrollEl.length ){
-          this.htmlBody = this.htmlBody || $('html,body');
+      scrollPagePosition (e, scrollEl) {
+        $(e.currentTarget).parent().find('.on').removeClass('on')
+        $(e.currentTarget).addClass('on')
+        this.scrollEl = $('#' + scrollEl)
+        if (this.scrollEl.length) {
+          this.htmlBody = this.htmlBody || $('html,body')
           this.htmlBody.animate({
-            scrollTop:this.scrollEl.offset().top
-          });
+            scrollTop: this.scrollEl.offset().top
+          })
+          this.show_menu = false
         }
       }
     }
   }
 </script>
 
+<style lang="less" rel="stylesheet/less">
+  .header__nav-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    + div {
+      padding-top: 90px;
+      box-sizing: content-box;
+    }
+  }
+</style>
 <style lang="less" rel="stylesheet/less" scoped>
   .header__nav-wrap {
     height: 45px * 2;

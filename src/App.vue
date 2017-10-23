@@ -21,7 +21,7 @@
       var debounce = tool.debounce(function () {
         var scrollTop = $(window).scrollTop();
         window.hasAnimate.filter(function () {
-          if ($(this).hasClass('into-k-animate')) {
+          if ($(this).hasClass('into-k-animate no-animate')) {
             return false
           }
           if (scrollTop + winHeight > $(this).offset().top) {

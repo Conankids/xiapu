@@ -13,13 +13,13 @@
           :cover="`${require('../style/public/img-2@3x.jpg')}`"
         />
       </div>
-      <div class="mgt4 k-animate-2">
-        <common-item
-          title="夏普空气净化器"
-          url="https://mall.jd.com/index-628105.html"
-          :cover="`${require('../style/public/img-3@3x.jpg')}`"
-        />
-      </div>
+      <!--<div class="mgt4 k-animate-2">-->
+        <!--<common-item-->
+          <!--title="夏普空气净化器"-->
+          <!--url="https://mall.jd.com/index-628105.html"-->
+          <!--:cover="`${require('../style/public/img-3@3x.jpg')}`"-->
+        <!--/>-->
+      <!--</div>-->
       <div class="mgt4 k-animate-2">
         <common-item
           title="夏普冰箱"
@@ -39,16 +39,13 @@
       <div class="mgt4 k-animate-2">
         <common-img
           url="javascript:;"
-          :cover="`${require('../style/public/img-50@3x.jpg')}`"
+          :cover="`${require('../style/public/img-60@3x.jpg')}`"
         />
       </div>
 
-      <div class="mgt4 k-animate-2" id="sqty">
+      <div class="mgt4" id="sqty">
         <common-title title="夏普双十一爆款产品免费体验"/>
-        <common-img
-          url="javascript:;"
-          :cover="`${require('../style/public/img-40@3x.jpg')}`"
-        />
+        <event-list />
       </div>
 
       <div class="index__new-product k-animate-2" id="rmxp">
@@ -104,6 +101,7 @@
   import CommonXinpin from '../components/common-xinpin.vue'
   import CommonSwiper2 from '../components/common-swiper-2.vue'
   import headerBanner from '../style/public/img-1@3x.jpg'
+  import EventList from '../components/event-list.vue'
 
   export default {
     data () {
@@ -116,7 +114,7 @@
       img.onload = () => {
         this.hidePageLoading()
         setTimeout(()=>{
-          $(this.$refs['element-body']).removeClass('k-animate-2 into-k-animate')
+          $(this.$refs['element-body']).removeClass('k-animate-2 into-k-animate').addClass('no-animate')
         },1000);
       }
       img.src = headerBanner
@@ -131,7 +129,8 @@
       CommonFooterSwiper,
       CommonBlog,
       CommonXinpin,
-      CommonSwiper2
+      CommonSwiper2,
+      EventList
     },
     methods: {
       ...mapActions([
