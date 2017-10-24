@@ -33,10 +33,10 @@
               url: 'http://player.youku.com/embed/XMjg5OTg1MDkyOA==',
               cover: require('../style/public/img-31@3x.jpg')
             }, {
-              url: 'http://player.youku.com/embed/XMjg2ODAwODU1Ng==',
+              url: 'https://v.qq.com/iframe/player.html?vid=e0563b6p5ta&tiny=0&auto=0',
               cover: require('../style/public/img-32@3x.jpg')
             }, {
-              url: 'http://v.qq.com/iframe/player.html?vid=e0540kzyfa0&auto=0',
+              url: 'https://v.qq.com/iframe/player.html?vid=e0540kzyfa0&tiny=0&auto=0',
               cover: require('../style/public/img-33@3x.jpg')
             }
           ]
