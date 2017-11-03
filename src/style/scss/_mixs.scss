@@ -1,0 +1,24 @@
+@import "_var";
+@import "_mins/_font";
+
+//函数
+.px2rem(@px) {
+  return: @px / @baseFontSize * 1rem;
+}
+
+body{
+  height: px2rem(10);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

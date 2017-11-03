@@ -1,0 +1,38 @@
+@import "../_var";
+
+.margin(@size,@attr) {
+    @{attr}: @size/@baseFontSize-v2;
+}
+
+.mg(@num,@max:30,@step:2) when ( @num <= @max ) {
+  .mgl@{num} {
+    .margin(@num * 2, margin-left);
+  }
+  .mgt@{num} {
+    .margin(@num * 2, margin-top);
+  }
+  .mgr@{num} {
+    .margin(@num * 2, margin-right);
+  }
+  .mgb@{num} {
+    .margin(@num * 2, margin-bottom);
+  }
+  .mg(@num + @step, @max, @step);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

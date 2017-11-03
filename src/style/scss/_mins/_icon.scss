@@ -1,0 +1,37 @@
+@import "../_var";
+
+.icon() {
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before {
+      content: '';
+      display: block;
+      height: 52 /@baseFontSize-v2;
+      width: 52 /@baseFontSize-v2;
+      //background-image: url(../../images/global-icon.png);
+      background-size: 500 /@baseFontSize-v2 auto;
+      background-clip: content-box;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
