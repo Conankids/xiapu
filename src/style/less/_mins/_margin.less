@@ -1,21 +1,21 @@
 @import "../_var";
 
 .margin(@size,@attr) {
-    @{attr}: unit(@size, px);
+    @{attr}: @size/@baseFontSize-v2;
 }
 
 .mg(@num,@max:30,@step:2) when ( @num <= @max ) {
   .mgl@{num} {
-    .margin(unit(@num * 2, px), margin-left);
+    .margin(@num * 2, margin-left);
   }
   .mgt@{num} {
-    .margin(unit(@num * 2, px), margin-top);
+    .margin(@num * 2, margin-top);
   }
   .mgr@{num} {
-    .margin(unit(@num * 2, px), margin-right);
+    .margin(@num * 2, margin-right);
   }
   .mgb@{num} {
-    .margin(unit(@num * 2, px), margin-bottom);
+    .margin(@num * 2, margin-bottom);
   }
   .mg(@num + @step, @max, @step);
 }

@@ -10,6 +10,10 @@ export default new Router({
     {
       path: '/',
       component: Index
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

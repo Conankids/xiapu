@@ -113,9 +113,14 @@
       var img = new Image()
       img.onload = () => {
         this.hidePageLoading()
-        setTimeout(()=>{
-          $(this.$refs['element-body']).removeClass('k-animate-2 into-k-animate').addClass('no-animate')
-        },1000);
+        $(window).on('scroll', () => {
+          if( !$(this.$refs['element-body']).hasClass('k-animate-2') ){
+            return;
+          }
+          setTimeout(()=>{
+            $(this.$refs['element-body']).removeClass('k-animate-2').removeClass('into-k-animate').addClass('no-animate').addClass('no-all-animate')
+          },500)
+        })
       }
       img.src = headerBanner
     },
@@ -141,14 +146,15 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  @import "./../style/less/_mixs.less";
   .element-bg {
     background-color: #F0EAE8;
   }
 
   .banner__box {
-    height: 272px * 2;
+    width: 100%;
     img {
-      height: 100%
+      width: 100%
     }
   }
 
@@ -158,12 +164,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     > div {
-      margin-top: 8px;
+      margin-top: 8 /@baseFontSize-v2;
     }
   }
 
   .index__event-hg-cover {
-    height: 183px * 2;
+    height: 183 * 2 /@baseFontSize-v2;
     overflow: hidden;
     img {
       height: 100%;

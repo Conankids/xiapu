@@ -19,6 +19,7 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .index__nwe1{
     /*height: 200px;*/
     width: 100%;

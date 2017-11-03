@@ -20,8 +20,9 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .common__title-box{
-    margin: 40px 0;
+    margin: 40 /@baseFontSize-v2 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,10 +30,10 @@
   }
   .common__title{
     color: #ED1B3A;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 40 /@baseFontSize-v2;
+    line-height: 56 /@baseFontSize-v2;
     text-align: center;
-    padding: 0 56px;
+    padding: 0 56 /@baseFontSize-v2;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,12 +41,12 @@
     width: 100%;
   }
   .common__title-line{
-    width: 48px;
-    height: 4px;
+    width: 48 /@baseFontSize-v2;
+    height: 4 /@baseFontSize-v2;
     background-color: #ED1B3A;
-    margin-top: 40px;
+    margin-top: 40 /@baseFontSize-v2;
   }
   .t2{
-    margin: 0 25px;
+    margin: 0 25 /@baseFontSize-v2;
   }
 </style>

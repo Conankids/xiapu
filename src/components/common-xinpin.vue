@@ -44,23 +44,24 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .index__four-pox-type-2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     > div {
-      margin-top: 20px;
+      margin-top: 20 /@baseFontSize-v2;
     }
     .index__four-item {
-      width: 182px * 2;
+      width: 182 * 2 /@baseFontSize-v2;
       img {
         width: 100%;
       }
     }
   }
   .index__four-item-img {
-    height: 137px * 2;
+    height: 137 * 2 /@baseFontSize-v2;
     overflow: hidden;
     img {
       display: block;
@@ -72,15 +73,15 @@
   .index__four-item-text {
     background-color: #8e8e8e;
     color: #fff;
-    font-size: 28px;
-    line-height: 40px;
-    height: 100px;
-    padding: 0 15px;
+    font-size: 28 /@baseFontSize-v2;
+    line-height: 40 /@baseFontSize-v2;
+    height: 100 /@baseFontSize-v2;
+    padding: 0 15 /@baseFontSize-v2;
     overflow: hidden;
     display: flex;
     align-items: center;
     .index__four-item-inner {
-      height: 80px;
+      height: 80 /@baseFontSize-v2;
       overflow: hidden;
       word-break: break-all;
 

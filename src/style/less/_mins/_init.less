@@ -1,3 +1,4 @@
+@import "../_var";
 @import "_font";
 
 .layout-init() {
@@ -17,14 +18,14 @@
   body {
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    width: 750px;
-    margin: auto;
     font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+  }
+  body{
+    //width: 750 / @baseFontSize-v2;
+    font-size: 28 / @baseFontSize-v2;
     color: #595959;
-    font-size: 28px;
+    margin: auto;
   }
   html * {
     outline: 0;

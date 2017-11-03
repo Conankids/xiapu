@@ -56,13 +56,14 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .event__list-item {
     position: relative;
   }
 
   .event__img-box {
-    width: 750px;
-    height: 750px/2;
+    width: 750 /@baseFontSize-v2;
+    height: 750/2 /@baseFontSize-v2;
     overflow: hidden;
     img {
       width: 100%;
@@ -74,13 +75,13 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 20px;
-    padding-bottom: 26px;
+    padding: 20 /@baseFontSize-v2;
+    padding-bottom: 26 /@baseFontSize-v2;
     color: #fff;
     .stream-title {
-      height: 60px;
-      line-height: 60px;
-      font-size: 36px;
+      height: 60 /@baseFontSize-v2;
+      line-height: 60 /@baseFontSize-v2;
+      font-size: 36 /@baseFontSize-v2;
       overflow: hidden;
     }
     .stream-text {
@@ -97,7 +98,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 150px;
+    height: 150 /@baseFontSize-v2;
     background: linear-gradient(top, rgba(255, 255, 255, 0.02), rgba(35, 35, 35, 0.69));
   }
 

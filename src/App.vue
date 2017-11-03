@@ -1,3 +1,4 @@
+
 <template>
   <div class="content-wrap">
     <loading v-show="show"/>
@@ -6,11 +7,12 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex';
-  import $ from 'jquery';
-  import tool from './tool/throttle';
+  import { mapState } from 'vuex'
+  import $ from 'jquery'
+  import tool from './tool/throttle'
+
   export default {
-    computed:{
+    computed: {
       ...mapState([
         'show'
       ])
@@ -19,18 +21,21 @@
       window.hasAnimate = $('.k-animate:not(.into-k-animate),.k-animate-2:not(.into-k-animate)')
       var winHeight = $(window).height()
       var debounce = tool.debounce(function () {
-        var scrollTop = $(window).scrollTop();
+        var scrollTop = $(window).scrollTop()
         window.hasAnimate.filter(function () {
           if ($(this).hasClass('into-k-animate no-animate')) {
             return false
           }
           if (scrollTop + winHeight > $(this).offset().top) {
+            if( $(this).hasClass('no-all-animate') ){
+              return false;
+            }
             $(this).addClass('into-k-animate')
             return false
           }
           return true
         })
-      },30,50)
+      }, 30, 50)
       $(window).off('scroll.into.animate').on('scroll.into.animate', function () {
         debounce()
       }).trigger('scroll.into.animate')
@@ -39,7 +44,8 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import "style/less/base.less";
+  @import "./style/less/_mixs.less";
+  @import "./style/less/base.less";
 
   .content-wrap {
     font-weight: 300;
@@ -48,18 +54,33 @@
 
   .k-animate {
     transition: all 1s;
-    transform: translateY(-50px);
+    transform: translateY(-50/@baseFontSize-v2);
     opacity: 0;
   }
 
   .k-animate-2 {
     transition: all 1s;
-    transform: translateY(50px);
+    transform: translateY(50/@baseFontSize-v2);
     opacity: 0;
   }
 
   .into-k-animate {
-    transform: translateY(0px);
+    transform: translateY(0/@baseFontSize-v2);
     opacity: 1;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 27/@baseFontSize-v2 !important;
+    height: 44/@baseFontSize-v2 !important;
+    margin-top: -22/@baseFontSize-v2 !important;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
+    -webkit-background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
+    background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 </style>

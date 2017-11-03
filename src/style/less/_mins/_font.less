@@ -24,7 +24,7 @@
 
 ._ft(@size,@max:30,@step:2) when ( @size <= @max ) {
   .ft@{size} {
-    font-size: unit(@size * 2, px);
+    font-size:@size * 2/@baseFontSize-v2;
   }
   ._ft(@size + @step, @max, @step);
 }

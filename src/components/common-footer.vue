@@ -5,13 +5,14 @@
 </template>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .footer__text{
-    height: 50px;
-    line-height: 50px;
+    height: 50 /@baseFontSize-v2;
+    line-height: 50 /@baseFontSize-v2;
     text-align: center;
-    font-size: 20px;
+    font-size: 20 /@baseFontSize-v2;
     background-color: #434343;
     color: #fff;
-    margin-top: 50px;
+    margin-top: 50 /@baseFontSize-v2;
   }
 </style>

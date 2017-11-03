@@ -32,11 +32,12 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .mask__box{
     position: relative;
   }
   .mask__cover{
-    height: 205px * 2;
+    height: 205 * 2 /@baseFontSize-v2;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -45,17 +46,17 @@
       width: 100%;
     }
     &.small{
-      height: 140px * 2;
-      width: 186px * 2;
+      height: 140 * 2 /@baseFontSize-v2;
+      width: 186 * 2 /@baseFontSize-v2;
     }
   }
   .mask__bg{
     background-color: rgba(0,0,0,0.35);
-    height: 70px;
-    line-height: 70px;
+    height: 70 /@baseFontSize-v2;
+    line-height: 70 /@baseFontSize-v2;
     text-align: center;
     color: #fff;
-    font-size: 36px;
+    font-size: 36 /@baseFontSize-v2;
     position: absolute;
     bottom: 0;
     left: 0;

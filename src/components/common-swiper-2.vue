@@ -64,9 +64,10 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  @import "../style/less/_mixs.less";
   .swiper-pagination-bullet {
-    height: 16px !important;
-    width: 16px !important;
+    height: 16 /@baseFontSize-v2 !important;
+    width: 16 /@baseFontSize-v2 !important;
   }
 
   .swiper__box {
@@ -75,11 +76,11 @@
 
   .swiper-button {
     position: absolute;
-    left: 20px;
+    left: 20 /@baseFontSize-v2;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px * 2 !important;
-    height: 32px * 2 !important;
+    width: 16 * 2 /@baseFontSize-v2 !important;
+    height: 32 * 2 /@baseFontSize-v2 !important;
     &.disabled {
       opacity: 0.5;
     }
@@ -88,7 +89,7 @@
     }
     &.swiper-button-next {
       left: auto;
-      right: 20px;
+      right: 20 /@baseFontSize-v2;
     }
   }
 

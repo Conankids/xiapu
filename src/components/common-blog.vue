@@ -68,6 +68,7 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "../style/less/_mixs.less";
   .blog__box {
     display: flex;
     justify-content: space-between;
@@ -75,12 +76,12 @@
     width: 100%;
 
     .blog__item {
-      width: 181px * 2;
+      width: 181 * 2 /@baseFontSize-v2;
       overflow: hidden;
-      margin-top: 20px;
+      margin-top: 20 /@baseFontSize-v2;
     }
     .blog__cover {
-      height: 137px * 2;
+      height: 137 * 2 /@baseFontSize-v2;
       overflow: hidden;
       img {
         width: 100%;
@@ -90,13 +91,13 @@
     }
     .blog__bottom-desc {
       background-color: #ff9898;
-      padding: 15px;
+      padding: 15 /@baseFontSize-v2;
       color: #fff;
-      font-size: 28px;
+      font-size: 28 /@baseFontSize-v2;
     }
     .blog__title {
-      line-height: 40px;
-      height: 80px;
+      line-height: 40 /@baseFontSize-v2;
+      height: 80 /@baseFontSize-v2;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -104,14 +105,14 @@
       -webkit-box-orient: vertical;
     }
     .blog__query {
-      margin-top: 20px;
+      margin-top: 20 /@baseFontSize-v2;
     }
     .blog__user-name {
-      font-size: 20px;
-      line-height: 28px;
-      height: 28px;
+      font-size: 20 /@baseFontSize-v2;
+      line-height: 28 /@baseFontSize-v2;
+      height: 28 /@baseFontSize-v2;
       overflow: hidden;
-      margin-left: 5px;
+      margin-left: 5 /@baseFontSize-v2;
     }
 
     .blog__user-info,
@@ -127,12 +128,12 @@
     }
     .blog__zan-num,
     .blog__comment-num {
-      font-size: 20px;
+      font-size: 20 /@baseFontSize-v2;
       color: #ED1B3A;
     }
     .blog__user-face {
-      width: 40px;
-      height: 40px;
+      width: 40 /@baseFontSize-v2;
+      height: 40 /@baseFontSize-v2;
       border-radius: 50%;
       overflow: hidden;
       img {
@@ -145,12 +146,12 @@
 
   .icon {
     &:before {
-      background-size: 24px auto !important;
+      background-size: 24 /@baseFontSize-v2 auto !important;
       background-repeat: no-repeat;
       background-position: center center;
     }
     &.icon-zan::before {
-      background-position: center 9px;
+      background-position: center 9 /@baseFontSize-v2;
       background-image: url(../style/public/icon-zan.svg);
     }
     &.icon-comment::before {

@@ -1,6 +1,6 @@
 <template>
   <div class="header__nav-box">
-    <div class="header__nav-wrap">
+    <div class="header__nav-wrap" ref="header__nav-wrap">
       <div class="header__logo">
         <img src="../style/images/logo@3x.png"/>
       </div>
@@ -68,10 +68,11 @@
         $(e.currentTarget).parent().find('.on').removeClass('on')
         $(e.currentTarget).addClass('on')
         this.scrollEl = $('#' + scrollEl)
+        var headerHeight = $(this.$refs['header__nav-wrap']).height()
         if (this.scrollEl.length) {
           this.htmlBody = this.htmlBody || $('html,body')
           this.htmlBody.animate({
-            scrollTop: this.scrollEl.offset().top
+            scrollTop: this.scrollEl.offset().top - headerHeight
           })
           this.show_menu = false
         }
@@ -81,6 +82,7 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+  @import "./../style/less/_mixs.less";
   .header__nav-box {
     position: fixed;
     left: 0;
@@ -88,22 +90,24 @@
     width: 100%;
     z-index: 2;
     + div {
-      padding-top: 90px;
+      padding-top: 90 /@baseFontSize-v2;
       box-sizing: content-box;
     }
   }
 </style>
 <style lang="less" rel="stylesheet/less" scoped>
+  @import "./../style/less/_mixs.less";
+
   .header__nav-wrap {
-    height: 45px * 2;
+    height: 45 * 2 /@baseFontSize-v2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px * 2;
+    padding: 0 10 * 2/@baseFontSize-v2;
 
     .header__logo {
-      height: 46px;
+      height: 46/@baseFontSize-v2;
       img {
         height: 100%;
         display: block;
@@ -112,7 +116,7 @@
 
     .header__menu {
       img {
-        width: 24px * 2;
+        width: 24 * 2/@baseFontSize-v2;
         height: 100%;
         display: block;
       }
@@ -131,11 +135,11 @@
     justify-content: center;
     align-items: center;
     .header__menu-close {
-      height: 48px;
-      width: 48px;
+      height: 48/@baseFontSize-v2;
+      width: 48/@baseFontSize-v2;
       position: absolute;
-      right: 60px;
-      top: 60px;
+      right: 60/@baseFontSize-v2;
+      top: 60/@baseFontSize-v2;
       cursor: pointer;
       img {
         width: 100%
@@ -145,11 +149,11 @@
 
   .header-menu-item-box {
     color: #fff;
-    line-height: 66px;
-    font-size: 48px;
+    line-height: 66/@baseFontSize-v2;
+    font-size: 48/@baseFontSize-v2;
     text-align: center;
     li {
-      height: 100px;
+      height: 100/@baseFontSize-v2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -166,7 +170,7 @@
   }
 
   .fade-enter-active, .fade-leave-active {
-    transition: opacity .3s
+    transition: opacity .3s;
   }
 
   .fade-enter, .fade-leave-to {

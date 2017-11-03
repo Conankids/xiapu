@@ -5,7 +5,7 @@
 </template>
 
 <style lang="less" rel="stylesheet/less">
-  @import "../../style/less/_mixs";
+  @import "../../style/less/_mixs.less";
 
   .page-loading {
     position: fixed;
@@ -18,7 +18,7 @@
   }
 
   .page-loading-img {
-    @loading-width: 80px;
+    @loading-width: 80 /@baseFontSize-v2;
     position: absolute;
     z-index: 9999;
     top: 50%;
