@@ -30,14 +30,14 @@
     }
   }
 </script>
+<style lang="scss" scoped>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+  @import "./../style/scss/include";
   .mask__box{
     position: relative;
   }
   .mask__cover{
-    height: 205 * 2 /@baseFontSize-v2;
+    height:px2rem( 205 * 2 );
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -46,17 +46,17 @@
       width: 100%;
     }
     &.small{
-      height: 140 * 2 /@baseFontSize-v2;
-      width: 186 * 2 /@baseFontSize-v2;
+      height:px2rem( 140 * 2 );
+      width:px2rem( 186 * 2 );
     }
   }
   .mask__bg{
     background-color: rgba(0,0,0,0.35);
-    height: 70 /@baseFontSize-v2;
-    line-height: 70 /@baseFontSize-v2;
+    height:px2rem( 70 );
+    line-height:px2rem( 70 );
     text-align: center;
     color: #fff;
-    font-size: 36 /@baseFontSize-v2;
+    font-size:px2rem( 36 );
     position: absolute;
     bottom: 0;
     left: 0;

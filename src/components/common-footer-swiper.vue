@@ -218,11 +218,12 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less">
-  @import "../style/less/_mixs.less";
+<style lang="scss">
+
+  @import "./../style/scss/include";
   .swiper-pagination-bullet {
-    height: 16 /@baseFontSize-v2 !important;
-    width: 16 /@baseFontSize-v2 !important;
+    height: px2rem(16 ) !important;
+    width: px2rem(16 ) !important;
   }
 
   .swiper__box {
@@ -231,11 +232,11 @@
 
   .swiper-button {
     position: absolute;
-    left: 20 /@baseFontSize-v2;
+    left: px2rem(20 );
     top: 50%;
     transform: translateY(-50%);
-    width: 16 * 2 /@baseFontSize-v2 !important;
-    height: 32 * 2 /@baseFontSize-v2 !important;
+    width: px2rem(16 * 2 ) !important;
+    height: px2rem(32 * 2 ) !important;
     &.disabled {
       opacity: 0.5;
     }
@@ -244,7 +245,7 @@
     }
     &.swiper-button-next {
       left: auto;
-      right: 20 /@baseFontSize-v2;
+      right: px2rem(20 );
     }
   }
 

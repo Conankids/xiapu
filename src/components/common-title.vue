@@ -11,42 +11,46 @@
 
 <script>
   export default {
-    props:{
-      title:{
-        type:String
+    props: {
+      title: {
+        type: String
       }
     }
   }
 </script>
+<style lang="scss" scoped>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
-  .common__title-box{
-    margin: 40 /@baseFontSize-v2 0;
+  @import "./../style/scss/include";
+
+  .common__title-box {
+    margin: px2rem(40) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 400;
   }
-  .common__title{
+
+  .common__title {
     color: #ED1B3A;
-    font-size: 40 /@baseFontSize-v2;
-    line-height: 56 /@baseFontSize-v2;
+    font-size: px2rem(40);
+    line-height: px2rem(56);
     text-align: center;
-    padding: 0 56 /@baseFontSize-v2;
+    padding: 0  px2rem(56);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  .common__title-line{
-    width: 48 /@baseFontSize-v2;
-    height: 4 /@baseFontSize-v2;
+
+  .common__title-line {
+    width: px2rem(48);
+    height: px2rem(4);
     background-color: #ED1B3A;
-    margin-top: 40 /@baseFontSize-v2;
+    margin-top: px2rem(40);
   }
-  .t2{
-    margin: 0 25 /@baseFontSize-v2;
+
+  .t2 {
+    margin:0  px2rem(25);
   }
 </style>

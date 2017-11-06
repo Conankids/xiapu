@@ -43,9 +43,8 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less">
-  @import "./style/less/_mixs.less";
-  @import "./style/less/base.less";
+<style lang="scss">
+  @import "./style/scss/app.scss";
 
   .content-wrap {
     font-weight: 300;
@@ -54,32 +53,33 @@
 
   .k-animate {
     transition: all 1s;
-    transform: translateY(-50/@baseFontSize-v2);
+    transform: translateY(px2rem(-50));
     opacity: 0;
   }
 
   .k-animate-2 {
     transition: all 1s;
-    transform: translateY(50/@baseFontSize-v2);
+    transform: translateY(px2rem(50));
     opacity: 0;
   }
 
   .into-k-animate {
-    transform: translateY(0/@baseFontSize-v2);
+    will-change: transform;
+    transform: translateY(0);
     opacity: 1;
   }
 
   .swiper-button-prev, .swiper-button-next {
     position: absolute;
     top: 50%;
-    width: 27/@baseFontSize-v2 !important;
-    height: 44/@baseFontSize-v2 !important;
-    margin-top: -22/@baseFontSize-v2 !important;
+    width: px2rem(27) !important;
+    height: px2rem(44) !important;
+    margin-top: px2rem(-22) !important;
     z-index: 10;
     cursor: pointer;
-    -moz-background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
-    -webkit-background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
-    background-size: 27/@baseFontSize-v2 44/@baseFontSize-v2 !important;
+    -moz-background-size: px2rem(27) px2rem(44) !important;
+    -webkit-background-size: px2rem(27) px2rem(44) !important;
+    background-size: px2rem(27) px2rem(44) !important;
     background-position: center;
     background-repeat: no-repeat;
   }

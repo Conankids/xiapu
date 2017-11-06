@@ -17,9 +17,9 @@
     }
   }
 </script>
+<style lang="scss" scoped>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+  @import "./../style/scss/include";
   .index__nwe1{
     /*height: 200px;*/
     width: 100%;

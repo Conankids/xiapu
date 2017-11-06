@@ -14,11 +14,11 @@
         />
       </div>
       <!--<div class="mgt4 k-animate-2">-->
-        <!--<common-item-->
-          <!--title="夏普空气净化器"-->
-          <!--url="https://mall.jd.com/index-628105.html"-->
-          <!--:cover="`${require('../style/public/img-3@3x.jpg')}`"-->
-        <!--/>-->
+      <!--<common-item-->
+      <!--title="夏普空气净化器"-->
+      <!--url="https://mall.jd.com/index-628105.html"-->
+      <!--:cover="`${require('../style/public/img-3@3x.jpg')}`"-->
+      <!--/>-->
       <!--</div>-->
       <div class="mgt4 k-animate-2">
         <common-item
@@ -45,7 +45,7 @@
 
       <div class="mgt4" id="sqty">
         <common-title title="夏普双十一爆款产品免费体验"/>
-        <event-list />
+        <event-list/>
       </div>
 
       <div class="index__new-product k-animate-2" id="rmxp">
@@ -114,12 +114,12 @@
       img.onload = () => {
         this.hidePageLoading()
         $(window).on('scroll', () => {
-          if( !$(this.$refs['element-body']).hasClass('k-animate-2') ){
-            return;
+          if (!$(this.$refs['element-body']).hasClass('k-animate-2')) {
+            return
           }
-          setTimeout(()=>{
+          setTimeout(() => {
             $(this.$refs['element-body']).removeClass('k-animate-2').removeClass('into-k-animate').addClass('no-animate').addClass('no-all-animate')
-          },500)
+          }, 500)
         })
       }
       img.src = headerBanner
@@ -145,8 +145,9 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less">
-  @import "./../style/less/_mixs.less";
+<style lang="scss">
+  @import "./../style/scss/include";
+
   .element-bg {
     background-color: #F0EAE8;
   }
@@ -164,12 +165,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     > div {
-      margin-top: 8 /@baseFontSize-v2;
+      margin-top: px2rem(8);
     }
   }
 
   .index__event-hg-cover {
-    height: 183 * 2 /@baseFontSize-v2;
+    height: px2rem(183 * 2);
     overflow: hidden;
     img {
       height: 100%;

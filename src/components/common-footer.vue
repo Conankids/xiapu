@@ -4,15 +4,15 @@
   </div>
 </template>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+<style lang="scss" scoped>
+  @import "./../style/scss/include";
   .footer__text{
-    height: 50 /@baseFontSize-v2;
-    line-height: 50 /@baseFontSize-v2;
+    height:px2rem( 50 );
+    line-height:px2rem( 50 );
     text-align: center;
-    font-size: 20 /@baseFontSize-v2;
+    font-size:px2rem( 20 );
     background-color: #434343;
     color: #fff;
-    margin-top: 50 /@baseFontSize-v2;
+    margin-top:px2rem( 50 );
   }
 </style>

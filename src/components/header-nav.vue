@@ -41,11 +41,11 @@
     },
     watch: {
       show_menu () {
-        if(this.show_menu){
+        if (this.show_menu) {
           ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
             window.addEventListener(item, this._preventDefault, {passive: false})
           })
-        }else{
+        } else {
           ['mousewheel', 'DOMMouseScroll', 'touchmove'].forEach((item) => {
             window.removeEventListener(item, this._preventDefault)
           })
@@ -57,7 +57,7 @@
         this.show_menu = false
       },
       openMenu () {
-        this.show_menu = true;
+        this.show_menu = true
       },
       _preventDefault (e) {
         e.preventDefault()
@@ -81,8 +81,9 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less">
-  @import "./../style/less/_mixs.less";
+<style lang="scss">
+  @import "./../style/scss/app.scss";
+
   .header__nav-box {
     position: fixed;
     left: 0;
@@ -90,24 +91,24 @@
     width: 100%;
     z-index: 2;
     + div {
-      padding-top: 90 /@baseFontSize-v2;
+      padding-top: px2rem(90);
       box-sizing: content-box;
     }
   }
 </style>
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "./../style/less/_mixs.less";
+<style lang="scss" scoped>
+  @import "./../style/scss/include";
 
   .header__nav-wrap {
-    height: 45 * 2 /@baseFontSize-v2;
+    height: px2rem(45 * 2);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10 * 2/@baseFontSize-v2;
+    padding: 0 px2rem(10 * 2);
 
     .header__logo {
-      height: 46/@baseFontSize-v2;
+      height: px2rem(46);
       img {
         height: 100%;
         display: block;
@@ -116,7 +117,7 @@
 
     .header__menu {
       img {
-        width: 24 * 2/@baseFontSize-v2;
+        width: px2rem(24 * 2);
         height: 100%;
         display: block;
       }
@@ -135,11 +136,11 @@
     justify-content: center;
     align-items: center;
     .header__menu-close {
-      height: 48/@baseFontSize-v2;
-      width: 48/@baseFontSize-v2;
+      height: px2rem(48);
+      width: px2rem(48);
       position: absolute;
-      right: 60/@baseFontSize-v2;
-      top: 60/@baseFontSize-v2;
+      right: px2rem(60);
+      top: px2rem(60);
       cursor: pointer;
       img {
         width: 100%
@@ -149,11 +150,11 @@
 
   .header-menu-item-box {
     color: #fff;
-    line-height: 66/@baseFontSize-v2;
-    font-size: 48/@baseFontSize-v2;
+    line-height: px2rem(66);
+    font-size: px2rem(48);
     text-align: center;
     li {
-      height: 100/@baseFontSize-v2;
+      height: px2rem(100);
       display: flex;
       justify-content: center;
       align-items: center;

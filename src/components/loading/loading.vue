@@ -4,9 +4,8 @@
   </div>
 </template>
 
-<style lang="less" rel="stylesheet/less">
-  @import "../../style/less/_mixs.less";
-
+<style lang="scss">
+  @import "./../../style/scss/include";
   .page-loading {
     position: fixed;
     z-index: 99999999;
@@ -18,14 +17,14 @@
   }
 
   .page-loading-img {
-    @loading-width: 80 /@baseFontSize-v2;
+    $loading-width: px2rem(80);
     position: absolute;
     z-index: 9999;
     top: 50%;
     left: 50%;
-    margin-left: -@loading-width/2;
-    margin-top: -@loading-width/2;
-    width: @loading-width;
-    height: @loading-width;
+    margin-left: -$loading-width/2;
+    margin-top: -$loading-width/2;
+    width: $loading-width;
+    height: $loading-width;
   }
 </style>

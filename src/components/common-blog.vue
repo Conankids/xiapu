@@ -46,29 +46,30 @@
     created () {
       var _this = this
       $.get('http://www.jiguo.com/api/article/GetXiaPuArticle', function (replayData) {
-        var blog = [];
+        var blog = []
         replayData.forEach((item) => {
           blog.push({
-            url: 'http://www.jiguo.com/article/article/'+item.blogid+'.html',
+            url: 'http://www.jiguo.com/article/article/' + item.blogid + '.html',
             title: item.title,
-            cover: `http://s1.jiguo.com/${item.cover}/640?imageView2/1/w/${182*2}/h/${137*2}/q/100`,
-            zan: item.praise||0,
-            comment: item.reply||0,
+            cover: `http://s1.jiguo.com/${item.cover}/640?imageView2/1/w/${182 * 2}/h/${137 * 2}/q/100`,
+            zan: item.praise || 0,
+            comment: item.reply || 0,
             username: item.author,
-            userface: item.avatar+'/230x230'
+            userface: item.avatar + '/230x230'
           })
-        });
-        _this.blog = blog;
-        _this.$nextTick(()=>{
-          window.hasAnimate = $('.k-animate:not(.into-k-animate),.k-animate-2:not(.into-k-animate)');
+        })
+        _this.blog = blog
+        _this.$nextTick(() => {
+          window.hasAnimate = $('.k-animate:not(.into-k-animate),.k-animate-2:not(.into-k-animate)')
         })
       }, 'jsonp')
     }
   }
 </script>
+<style lang="scss" scoped>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+  @import "./../style/scss/include";
+
   .blog__box {
     display: flex;
     justify-content: space-between;
@@ -76,12 +77,13 @@
     width: 100%;
 
     .blog__item {
-      width: 181 * 2 /@baseFontSize-v2;
+      width: px2rem(181 * 2);
       overflow: hidden;
-      margin-top: 20 /@baseFontSize-v2;
+      margin-top: px2rem(20);
     }
+
     .blog__cover {
-      height: 137 * 2 /@baseFontSize-v2;
+      height: px2rem(137 * 2);
       overflow: hidden;
       img {
         width: 100%;
@@ -91,13 +93,13 @@
     }
     .blog__bottom-desc {
       background-color: #ff9898;
-      padding: 15 /@baseFontSize-v2;
+      padding: px2rem(15);
       color: #fff;
-      font-size: 28 /@baseFontSize-v2;
+      font-size: px2rem(28);
     }
     .blog__title {
-      line-height: 40 /@baseFontSize-v2;
-      height: 80 /@baseFontSize-v2;
+      line-height: px2rem(40);
+      height: px2rem(80);
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -105,14 +107,14 @@
       -webkit-box-orient: vertical;
     }
     .blog__query {
-      margin-top: 20 /@baseFontSize-v2;
+      margin-top: px2rem(20);
     }
     .blog__user-name {
-      font-size: 20 /@baseFontSize-v2;
-      line-height: 28 /@baseFontSize-v2;
-      height: 28 /@baseFontSize-v2;
+      font-size: px2rem(20);
+      line-height: px2rem(28);
+      height: px2rem(28);
       overflow: hidden;
-      margin-left: 5 /@baseFontSize-v2;
+      margin-left: px2rem(5);
     }
 
     .blog__user-info,
@@ -128,12 +130,12 @@
     }
     .blog__zan-num,
     .blog__comment-num {
-      font-size: 20 /@baseFontSize-v2;
+      font-size: px2rem(20);
       color: #ED1B3A;
     }
     .blog__user-face {
-      width: 40 /@baseFontSize-v2;
-      height: 40 /@baseFontSize-v2;
+      width: px2rem(40);
+      height: px2rem(40);
       border-radius: 50%;
       overflow: hidden;
       img {
@@ -146,12 +148,12 @@
 
   .icon {
     &:before {
-      background-size: 24 /@baseFontSize-v2 auto !important;
+      background-size: px2rem(24) auto !important;
       background-repeat: no-repeat;
       background-position: center center;
     }
     &.icon-zan::before {
-      background-position: center 9 /@baseFontSize-v2;
+      background-position: center px2rem(9);
       background-image: url(../style/public/icon-zan.svg);
     }
     &.icon-comment::before {

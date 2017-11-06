@@ -55,15 +55,16 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+<style lang="scss" scoped>
+
+  @import "./../style/scss/include";
   .event__list-item {
     position: relative;
   }
 
   .event__img-box {
-    width: 750 /@baseFontSize-v2;
-    height: 750/2 /@baseFontSize-v2;
+    width:px2rem( 750 );
+    height:px2rem( 750/2 );
     overflow: hidden;
     img {
       width: 100%;
@@ -75,13 +76,13 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 20 /@baseFontSize-v2;
-    padding-bottom: 26 /@baseFontSize-v2;
+    padding:px2rem( 20 );
+    padding-bottom:px2rem( 26 );
     color: #fff;
     .stream-title {
-      height: 60 /@baseFontSize-v2;
-      line-height: 60 /@baseFontSize-v2;
-      font-size: 36 /@baseFontSize-v2;
+      height:px2rem( 60 );
+      line-height:px2rem( 60 );
+      font-size:px2rem( 36 );
       overflow: hidden;
     }
     .stream-text {
@@ -98,7 +99,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 150 /@baseFontSize-v2;
+    height:px2rem( 150 );
     background: linear-gradient(top, rgba(255, 255, 255, 0.02), rgba(35, 35, 35, 0.69));
   }
 

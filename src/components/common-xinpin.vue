@@ -43,25 +43,26 @@
   }
 </script>
 
-<style lang="less" rel="stylesheet/less" scoped>
-  @import "../style/less/_mixs.less";
+<style lang="scss" scoped>
+
+  @import "./../style/scss/include";
   .index__four-pox-type-2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     > div {
-      margin-top: 20 /@baseFontSize-v2;
+      margin-top:px2rem( 20 );
     }
     .index__four-item {
-      width: 182 * 2 /@baseFontSize-v2;
+      width:px2rem( 182 * 2 );
       img {
         width: 100%;
       }
     }
   }
   .index__four-item-img {
-    height: 137 * 2 /@baseFontSize-v2;
+    height:px2rem( 137 * 2 );
     overflow: hidden;
     img {
       display: block;
@@ -73,15 +74,15 @@
   .index__four-item-text {
     background-color: #8e8e8e;
     color: #fff;
-    font-size: 28 /@baseFontSize-v2;
-    line-height: 40 /@baseFontSize-v2;
-    height: 100 /@baseFontSize-v2;
-    padding: 0 15 /@baseFontSize-v2;
+    font-size:px2rem( 28 );
+    line-height:px2rem( 40 );
+    height:px2rem( 100 );
+    padding:0 px2rem( 15 );
     overflow: hidden;
     display: flex;
     align-items: center;
     .index__four-item-inner {
-      height: 80 /@baseFontSize-v2;
+      height:px2rem( 80 );
       overflow: hidden;
       word-break: break-all;
 
