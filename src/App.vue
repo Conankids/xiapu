@@ -1,4 +1,3 @@
-
 <template>
   <div class="content-wrap">
     <loading v-show="show"/>
@@ -27,8 +26,8 @@
             return false
           }
           if (scrollTop + winHeight > $(this).offset().top) {
-            if( $(this).hasClass('no-all-animate') ){
-              return false;
+            if ($(this).hasClass('no-all-animate')) {
+              return false
             }
             $(this).addClass('into-k-animate')
             return false
@@ -44,6 +43,7 @@
 </script>
 
 <style lang="scss">
+  $IMAGES_PATH: './style/images/';
   @import "./style/scss/app.scss";
 
   .content-wrap {

@@ -82,6 +82,8 @@
 </script>
 
 <style lang="scss">
+
+  $IMAGES_PATH: './../style/images/';
   @import "./../style/scss/app.scss";
 
   .header__nav-box {

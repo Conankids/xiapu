@@ -1,6 +1,4 @@
 @mixin layout-init() {
-  @import "normalize";
-
   * {
     margin: 0;
     padding: 0;
@@ -15,13 +13,18 @@
   }
   body {
     font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-    width: px2rem(750);
     font-size: px2rem(28);
     color: #595959;
     margin: auto;
   }
   iframe {
     border: none;
+  }
+  em,i{
+    font-style: normal;
+  }
+  li {
+    list-style: none;
   }
   img {
     border: none;
@@ -30,6 +33,7 @@
   }
   a {
     text-decoration: none;
+    color: #595959;
   }
 }
 

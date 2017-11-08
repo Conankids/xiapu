@@ -2,7 +2,7 @@
   <div style="background-color: #fff;" id="index">
     <header-nav class="element-bg"></header-nav>
     <div class="banner__box k-animate element-bg">
-      <a href="javascript:;"><img :src="headerBanner"/></a>
+      <a href="https://sale.jd.com/m/act/vkFE0zDxpN.html"><img :src="headerBanner"/></a>
     </div>
     <div class="k-animate-2 element-bg" ref="element-body" style="overflow: hidden">
       <div class="k-animate-2" id="sjjh">
