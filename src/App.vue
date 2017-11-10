@@ -77,10 +77,9 @@
     margin-top: px2rem(-22) !important;
     z-index: 10;
     cursor: pointer;
-    -moz-background-size: px2rem(27) px2rem(44) !important;
-    -webkit-background-size: px2rem(27) px2rem(44) !important;
     background-size: px2rem(27) px2rem(44) !important;
     background-position: center;
     background-repeat: no-repeat;
   }
 </style>
+

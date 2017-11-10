@@ -3,6 +3,10 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
+// var fb = vueLoaderConfig.loaders.less[2].options.plugins[0];
+// for(var i in fb)
+// console.log( fb.install )
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
