@@ -6,7 +6,7 @@ import router from './router'
 import store from './store'
 import Loading from './components/loading'
 import 'swiper/dist/css/swiper.css'
-
+//
 Vue.config.productionTip = false
 Vue.use(Loading)
 

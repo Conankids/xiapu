@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: '/Users/jiangzg/PhpstormProjects/JIGUO/jiguo/static/xiapu/mb/index.html',
-    assetsRoot: '/Users/jiangzg/PhpstormProjects/JIGUO/cdn/special/xiapu/mb',
+    index: path.resolve(__dirname, '../dist/index.html'),
+    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: 'http://cdn.jiguo.com/special/xiapu/mb/',
     productionSourceMap: true,
