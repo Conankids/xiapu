@@ -17,6 +17,7 @@
     "jquery": "^3.2.1",
     "vue": "^2.5.3",
     "vue-awesome-swiper": "^2.6.7",
+    "vue-jui": "^0.2.1",
     "vue-router": "^2.7.0",
     "vue-video": "^0.1.7",
     "vuex": "^2.4.1"
